@@ -10,3 +10,4 @@ for FILE in $STAGED_FILES; do
         python oracle_ai_peer_review.py "$CONTENT" "$FILE" "$OUTPUT_DIR"
     fi
 done
+

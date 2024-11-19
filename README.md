@@ -13,4 +13,3 @@ chmod u+x .git/hooks/pre-commit
 ## oracle_ai_peer_review.py
 
 The file called `oracle_ai_peer_review.py` should be stored in the root of your git repo. For this file to work you need to configure `~/.oci/config` and supply your compartment id in the variable called `ORACLE_COMPARTMENT_ID`.
-
