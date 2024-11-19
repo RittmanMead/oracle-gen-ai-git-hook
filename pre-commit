@@ -1,0 +1,12 @@
+#!/bin/bash
+
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM)
+OUTPUT_DIR="oracle_ai_peer_review"
+mkdir -p $OUTPUT_DIR
+
+for FILE in $STAGED_FILES; do
+    if [[ "$FILE" == *.py || "$FILE" == *.js ]]; then
+        CONTENT=$(git show :$FILE)
+        python oracle_ai_peer_review.py "$CONTENT" "$FILE" "$OUTPUT_DIR"
+    fi
+done
