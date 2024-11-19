@@ -27,8 +27,6 @@ def review_code(content, filename):
     chat_detail.chat_request = chat_request
     chat_detail.compartment_id = compartment_id
     chat_response = generative_ai_inference_client.chat(chat_detail)
-    print(type(chat_response.data.chat_response.text))
-    print(dir(chat_response.data.chat_response.text))
     return chat_response.data.chat_response.text
 
 def write_feedback(content, filename, output_dir):
